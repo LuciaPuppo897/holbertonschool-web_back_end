@@ -3,7 +3,7 @@
 
 
 from typing import List
-task_wait_random = __import__('4-tasks').task_wait_random
+task_wait_random = __import__('1-concurrent_coroutines').task_wait_random
 
 
 async def task_wait_n(n: int, max_delay: int) -> List[float]:
