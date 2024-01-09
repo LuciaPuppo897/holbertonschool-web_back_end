@@ -5,7 +5,7 @@ import asyncio
 import random
 
 
-async def async_generator() -> asyncGenerator[float, None]:
+async def async_generator():
     """Asynchronous coroutine that use random numbers after waiting 1 second"""
     for _ in range(10):
         await asyncio.sleep(1)
