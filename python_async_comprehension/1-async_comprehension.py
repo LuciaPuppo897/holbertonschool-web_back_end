@@ -2,7 +2,7 @@
 """calls async_generator and do the same but with args"""
 
 import asyncio
-import random
+from typing import List
 async_generator = __import__('1-async_comprehension').async_generator
 
 
