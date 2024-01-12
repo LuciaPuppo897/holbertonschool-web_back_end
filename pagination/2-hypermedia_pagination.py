@@ -52,6 +52,7 @@ class Server:
         return data[index[0]:index[1]]
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
+        """get hyper function that do that get hyper function thing"""
         paginated_data = self.get_page(page, page_size)
 
         next_page = page + 1 if len(paginated_data) > 0 else None
