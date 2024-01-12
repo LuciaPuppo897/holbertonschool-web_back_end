@@ -38,12 +38,13 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+        """get page function"""
         assert (type(page), type(page_size)) == (int, int)
         assert page > 0
         assert page_size > 0
 
         data = self.dataset()
-        index = index_rango(page, page_size)
+        index = index_range(page, page_size)
 
         if index[1] > len(data):
             return []
