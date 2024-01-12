@@ -5,17 +5,16 @@
 
 """
 
-import pymongo
+
 from pymongo import MongoClient
 
 
 if __name__ == "__main__":
+    """main function"""
     client = MongoClient('mongodb://127.0.0.1:27017')
     log_collection = client.logs.nginx
-
-    method = ["GET", "POST", "PUT", "PATCH", "DELETE"]
-
     print("{} logs".format(log_collection.count_documents({})))
+    method = ["GET", "POST", "PUT", "PATCH", "DELETE"]
     print("Methods:")
 
     for m in method:
