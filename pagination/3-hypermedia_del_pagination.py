@@ -43,21 +43,21 @@ class Server:
         """get hyper function"""
         assert isinstance(page_size, int) and page_size > 0
 
-    data = self.dataset()
-    total_rows = len(data)
+        data = self.dataset()
+        total_rows = len(data)
 
-    if index is None:
-        index = 0
-    else:
-        assert isinstance(index, int) and index >= 0
-        assert index <= total_rows
+        if index is None:
+            index = 0
+        else:
+            assert isinstance(index, int) and index >= 0
+            assert index <= total_rows
 
-    next_index = index + page_size
-    paginated_data = data[index:next_index]
+        next_index = index + page_size
+        paginated_data = data[index:next_index]
 
-    return {
-        'index': index,
-        'next_index': next_index if next_index < total_rows else None,
-        'page_size': len(paginated_data),
-        'data': paginated_data
-    }
+        return {
+            'index': index,
+            'next_index': next_index if next_index < total_rows else None,
+            'page_size': len(paginated_data),
+            'data': paginated_data
+        }
