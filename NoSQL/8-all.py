@@ -7,5 +7,6 @@
 
 
 def list_all(mongo_collection):
+    """function that return an empty list if no doc found"""
     documents = list(mongo_collection.find({}))
     return documents
