@@ -5,10 +5,8 @@ export default function handleProfileSignup () {
     uploadPhoto(),
     createUser(),
   ])
-    .then((values) => {
-      console.log(values[0].body, ...Object.values(values[1]));
-    })
-    .catch(() => {
-      console.log('Signup system offline');
-    });
+    .then((values) => 
+      console.log('${values[0].body} ${values[1].firstName} ${values[1].lastName}'))
+    .catch(() => 
+      console.log('Signup system offline'));
 }
