@@ -1,5 +1,8 @@
 export default function updateUniqueItems(groceryMap) {
-  if (!(map instanceof Map)) throw new Error('cannont process');
+  if (!(groceryMap instanceof Map)) {
+    throw new Error('Cannot process');
+  }
+
   for (const [item, quantity] of groceryMap.entries()) {
     if (quantity === 1) {
       groceryMap.set(item, 100);
